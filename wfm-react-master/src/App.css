@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logout{
+  float:right;
+  background-color: dodgerblue;
+  color: white;
+}
+
+/*Modal Styling*/
+.modal .modal-header {
+  background-color: #530081;
+  color: #fff;
+  border-bottom: 1px solid #530081;
+  padding: 5px 10px;
+  border-radius:0;
+}
+.modal .modal-header .btn-close {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.modal .modal-content {
+border:none;
+}
+label, p {
+  font-size: 14px;
+  font-weight: 600;
+}
+span {
+font-size:14px;
+}
+.modal .btn-secondary,.modal .btn-secondary:hover {
+  padding: 5px 7px;
+  background-color:#eee;
+  border: 1px solid #eee;
+  color: #656565;
+  font-size:14px;
+}
+.modal .btn-primary,.modal .btn-primary:hover {
+padding: 5px 7px;
+background-color: #530081;
+border: 1px solid #530081;
+color: #fff;
+font-size:14px;
+}
+.RequestLockButton{
+background-color:#3452b4;
+color:#fff;
+padding:5px 7px;
+border:1px solid #3452b4;
+font-size:13px;
+margin: 3px 0 0 60px;
+border-radius:5px;
+}
+.fa-lock {
+margin-right:5px;
+}
+
+.fa-times {
+  color:#fff;
+}
+
+#approveLock .modal-body label {
+width:150px;
+color:#3452b4;
+}
+#approveLock .modal-body div {
+margin-bottom:10px;
+}
+.StatusMsg {
+  text-decoration: underline;
+  color: #530081;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+}
+.Headings {
+color:#3452b4;
+text-decoration: underline;
+}
+/*Grid Styles*/
+.k-grid .k-grid-header{
+background-color: #586d99;
+color: #fff;
+}
+.k-grid .k-pager-wrap {
+background-color: #586d99;
+  color: #fff;
+  padding: 0 10px;
+}
+.k-grid .k-pager-numbers .k-link.k-state-selected {
+color: #656565 !important;
+background-color:#fff;
+min-width: 20px;
+height: 20px;
+margin-top:5px;
+}
+.k-grid tbody tr:hover,.k-grid tr.k-alt {
+  background-color:#fff !important;
+}
+.k-grid td {
+  border-color: #ccc !important;
+  border-width: 1px 1px 0px 0px !important;
+}
+.k-grid-content {
+  border: 1px solid #ccc !important;
+  overflow-y: auto !important;
+}
+.btn-default{
+  padding:3px 10px !important;
+  background-color: lightgrey !important;
+  color:darkblue !important;
+  border: 1px solid darkblue !important;
+  border-radius: 0px !important;
+  margin: 10px !important;
+}
+.k-grid td.skillColumnStyle:last-child {
+  border-right: 1px solid #ccc !important;
+}
+.k-grid td:last-child {
+  border-right:none  !important;
+}
+.k-pager-numbers .k-link {
+  color: #fff !important;
+}

@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "2c4a9d29-d9b0-4aae-830a-e854071a2cd5",
+		"name": "WFM API Requests",
+		"description": "API Requests of WFM project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign in",
+			"item": [
+				{
+					"name": "Manager Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"faizal\", \"password\": \"pass@123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/users/signin",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WFM Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"lokesh\", \"password\": \"pass@123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/users/signin",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager Grid",
+			"item": [
+				{
+					"name": "Manager Grid",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhaXphbCIsInBhc3N3b3JkIjoicGFzc0AxMjMiLCJpYXQiOjE2MzkyMTIwNDd9.JZnlwPKXG98tc3dMSCdAa0NlFNpOdzVQVdZDOquh8Pc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/employees/manager/faizal",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"employees",
+								"manager",
+								"faizal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adds softlock request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhaXphbCIsInBhc3N3b3JkIjoicGFzc0AxMjMiLCJpYXQiOjE2MzkyMjkzNjd9.vjY-d_B-DTNR8IrpFBPFJvKcsXM95542BCdhkNMnEq8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\":1023,\r\n    \"username\":\"faizal\",\r\n    \"requestmessage\":\"I need resource\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/employees/softlock",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"employees",
+								"softlock"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wfm grid",
+			"item": [
+				{
+					"name": "wfm grid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imxva2VzaCIsInBhc3N3b3JkIjoicGFzc0AxMjMiLCJpYXQiOjE2MzkyMzI5NjR9.QpOFSM7Tb7T0JByjyraXwMrHO9Qr_e0EP392s2cRE3U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/employees/wfm/lokesh",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"employees",
+								"wfm",
+								"lokesh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept/Reject softlock request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imxva2VzaCIsInBhc3N3b3JkIjoicGFzc0AxMjMiLCJpYXQiOjE2MzkyNDE4NzV9.W56sIfliS_17D_2K-DNHmHPtLz5wn8GaCTxjinBWE5k"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\":1023,\r\n    \"status\":\"accepted\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/employees/softlockstatus",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"employees",
+								"softlockstatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
